@@ -1,0 +1,88 @@
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+body *{
+    font-family: "Candara", serif;
+}
+
+#header{
+    padding-top: 1%;
+    margin: 0;
+    background: rgba(34, 34, 34, 0.88);
+    text-align: center;
+}
+#header h1{
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding: 1%;
+    font-size: 550%;
+    border-radius: 20%;
+    margin: 0 30% 1%;
+}
+#header p{
+    background-color: black;
+    margin: 0;
+    color: white;
+}
+
+#leftPanel,
+#rightPanel{
+    display: block;
+    max-height: 576px;
+    height: 525px;
+    border-radius: 10px;
+    margin: 1%;
+    padding: 1%;
+    /*display: inline-block;*/
+    width: 93%;
+    background-color: #3a3e3e;
+}
+
+#currentTurnContainer{
+    display: inline-block;
+}
+#currentTurnContainer *{
+    display: inline-block;
+    margin: 0;
+    width: 80%;
+}
+
+#gameStatusContainer{
+    display: inline-block;
+    width: 80%;
+    align-self: center;
+    padding: 2px;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 150%;
+    margin: 0 0 5px;
+}
+
+#settingsContainer{
+    align-items: center;
+    text-align: center;
+    padding: 1%;
+    height: 85%;
+    border-radius: 15px;
+    display: block;
+    width: 98%;
+    background-color: #4CAF50;
+}
+#settingsContainer *{
+    text-align: center;
+}
+#settingsContainer div{
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+    width: 90%;
+    padding: 5px 5px 12px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+

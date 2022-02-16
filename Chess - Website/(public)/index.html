@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chess</title>
+      <link rel="icon" href="gameFiles/resources/chessPieces/whiteKnight.png">
+      <link type="text/css" rel="stylesheet" href="gameFiles/chessStyleMain.css">
+      <link type="text/css" rel="stylesheet" href="gameFiles/chessBoardStyle.css">
+      <link type="text/css" rel="stylesheet" href="gameFiles/messagingDesign.css">
+      <link type="text/css" rel="stylesheet" href="gameFiles/playerViewDesign.css">
+      <link type="text/css" rel="stylesheet" href="gameFiles/generalValues.css">
+      <link type="text/css" rel="stylesheet" href="profileManagerStyle.css">
+  </head>
+  <body onunload="onPageUnload()">
+
+      <div id="snackbar"></div>
+
+      <div id = "dialog">
+
+          <div id = "loginForum">
+              <h1>Login</h1>
+
+              <label for="emailField"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" id="emailField">
+
+              <label for="passwordField"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" id="passwordField">
+
+              <button onclick="login()" type="submit">Login</button>
+              <button onclick="signUpDialogOpen()">Sign up</button>
+              <button onclick="showPlayAsGuestDialog()">Play as guest</button>
+          </div>
+      </div>
+
+      <div id = "signUpDialog">
+          <div id = "signUpDialogContent">
+
+              <h1>Sign up</h1>
+
+              <label for="nameField"><b>Name</b></label>
+              <input type="text" placeholder="Enter Name" id="nameField">
+
+              <label for="emailFieldNewUser"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" id="emailFieldNewUser">
+
+              <label for="passwordField1NewUser"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" id="passwordField1NewUser">
+
+              <label for="passwordField2NewUser"><b>Password</b></label>
+              <input type="password" placeholder="Reenter Password" id="passwordField2NewUser">
+
+              <button onclick="signUp()" type="submit">Sign up</button>
+              <button onclick="signUpDialogClose()" class="cancelButton">Cancel</button>
+
+          </div>
+      </div>
+
+      <div id="profileViewDialog">
+          <div id = "profileViewDialogContent">
+              <img src="resources/default%20pp-01.svg" alt = "profilePicture" title="Change Profile Picture"
+                   id="profileViewPicture" onclick="changeProfilePicture()">
+              <div id = "profilePictureChangeConfirmation">
+                  <button class="btn" onclick="confirmChangeProfilePicture()">Confirm</button>
+                  <button class="cancelButton" onclick="cancelChangeProfilePicture()">Cancel</button>
+              </div>
+              <h1 id = "profileViewName">Loading</h1>
+
+              <button class="btn" onclick="changeDataDialogOpen()">Change Data</button>
+              <button class="btn" onclick="changePasswordDialogOpen()" id="changePasswordButton">Change Password</button>
+              <button class="cancelButton" onclick="userDataDialogClose()">Back</button>
+              <button onclick="logOut()" class="cancelButton">Logout</button>
+          </div>
+      </div>
+
+      <div id = "editDataDialog">
+          <div id = "editDataDialogContent">
+
+              <h1>Edit Data</h1>
+
+              <label for="nameFieldEdit"><b>Name</b></label>
+              <input type="text" placeholder="Enter Name" id="nameFieldEdit">
+
+              <button onclick="editUserData()" type="submit">Change Data</button>
+              <button onclick="changeDataDialogClose()" class="cancelButton">Cancel</button>
+
+          </div>
+      </div>
+
+      <div id = "changePasswordDialog">
+          <div id = "changePasswordDialogContent">
+
+              <h1>Change Password</h1>
+
+              <label for="oldPasswordField"><b>Old Password</b></label>
+              <input type="password" placeholder="Old Password" id="oldPasswordField">
+
+              <label for="newPasswordField1"><b>New Password</b></label>
+              <input type="password" placeholder="New Password" id="newPasswordField1">
+
+              <label for="newPasswordField2"><b>Retype New Password</b></label>
+              <input type="password" placeholder="Retype New Password" id="newPasswordField2">
+
+              <button onclick="changePassword()" type="submit">Change Password</button>
+              <button onclick="changePasswordDialogClose()" class="cancelButton">Cancel</button>
+
+
+          </div>
+      </div>
+
+      <div id = "progressBarDialog">
+          <div id="progressBarDialogContent">
+              <h3>Uploading Image</h3>
+              <div id="progressBarContainer">
+                  <div id="progressBar">
+                  </div>
+              </div>
+              <p id= "progressValue">0%</p>
+          </div>
+      </div>
+
+      <div id = "inflatableDialog">
+          <div id = "inflatableDialogContent"></div>
+      </div>
+
+      <div id="header" >
+
+          <h1 onclick="runTest()">Chess</h1>
+          <p onclick="runTest2()">Made by ParadoX</p>
+
+      </div>
+
+      <div id = "tableValues">
+        <div>
+            <button onclick="startNewTableOpen()">Make New Table</button>
+            <p class="encircled">OR</p>
+            <button onclick="joinTableOpen()">Join Existing Table</button>
+        </div>
+        <input id="tableIdContainer" placeholder="Table Id">
+        <div onclick="userDataDialogOpen()" id ="userDisplay">
+            <img src="resources/default%20pp-01.svg" alt="profile picture" id="userDisplayProfilePicture">
+            <p id="userDisplayName"> Loading </p>
+            <p id="currentUserStats"></p>
+        </div>
+        <p id = "currentTableViewer">Current Table ID : none</p>
+    </div>
+
+      <div id = "mainGameContainer">
+        <div id="boardContainer">
+
+          <div id="leftPanel">
+              <div id = "settingsContainer">
+                  <div id="currentTurnContainer">
+                      <h3>Current Turn</h3>
+                      <h1 id="turnPlayerName">None</h1>
+                      <p id="turnColor">(none)</p>
+                  </div>
+
+                  <p id="gameStatusContainer" class="yellowTextBox">No game joined</p>
+                  <button class="greenButton" onclick="startGame()" id="startGameButton">Start Game</button>
+                  <button class="normalButton" onclick="showSpectatorsDialog()">Spectators</button>
+                  <button class="normalButton" onclick="openSettingsDialog()" id="tableSettingsButton">Table Settings</button>
+                  <button class="redButton" onclick="forfeitMatch()">Forfeit Match</button>
+                  <button class="redButton" onclick="leaveTable()">Leave Table</button>
+                  <button class="redButton" onclick="deleteTable()" id="deleteTableButton">Delete Table</button>
+              </div>
+              <div id="blackPlayerData">
+                  Waiting for player
+              </div>
+          </div>
+
+          <div id="board">
+            <table id="boardGrid">
+            </table>
+          </div>
+
+          <div id="rightPanel">
+              <div id="whitePlayerData">
+                  Waiting for player
+              </div>
+              <div id = "conversationContainer">
+                  <div id="conversationViewer">Hello</div>
+                  <div id="newMessageContainer">
+                      <input placeholder="Enter Message" id="newMessageField">
+                      <img class="normalButton" onclick="sendMessage()" src="resources/send-button.png" alt="Send">
+                  </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
+      <script src="profileManager.js"></script>
+      <script src="gameFiles/tableManager.js"></script>
+      <script src="gameFiles/chatManager.js"></script>
+      <script src="gameFiles/gameManager.js"></script>
+      <script src="gameFiles/playersAndTurnManager.js"></script>
+      <script src="gameFiles/chessIndex.js"></script>
+  </body>
+</html>

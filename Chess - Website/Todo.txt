@@ -1,0 +1,22 @@
+Fixes:
+    TODO changing settings resets password
+    TODO logging out mid game is possible
+    TODO keeps showing checked snackbar after match end
+
+Small Tasks :
+    TODO add special moves
+    |------> TODO castling
+    TODO rework checkMate detection
+
+Medium Tasks :
+    TODO add graveyard
+    TODO better UI
+    TODO add support for scaling
+    TODO add support for touch input
+
+Large Tasks :
+    TODO add themes and user customise-able colors
+    TODO add single player mode
+    TODO add hot seat mode
+    TODO add matchmaking
+    TODO add mmr system

@@ -1,0 +1,112 @@
+#tableValues *{
+    margin: 1px;
+    padding: 0;
+}
+#tableValues{
+    margin-top: 10px;
+}
+#tableValues button{
+    font-size: 15px;
+    display: inline-block;
+    margin: 3px;
+    padding: 10px;
+    border-radius: 10%;
+    color: white;
+    background-color: #333333;
+    border: 1px gray solid;
+}
+#tableValues label{
+    display: block;
+}
+#tableValues .encircled{
+    border: 2px  #333333 solid;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-block;
+
+}
+#tableIdContainer{
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: #333333;
+    color: white;
+    border: 1px black solid;
+    height: 40px;
+    border-radius: 10%;
+    width: 400px;
+}
+#tableIdContainer::placeholder{
+    text-align: center;
+    color: white;
+}
+#tableValues p{
+    padding: 2px;
+    background-color: black;
+    margin: 10px 0 0;
+    color: white;
+}
+
+#mainGameContainer *{
+    text-align: center;
+}
+#boardContainer{
+    display: flex;
+    /*align-items: flex-start;*/
+    /*justify-content: center;*/
+    /*grid-template-columns: auto 578px auto;*/
+    /*display: grid;*/
+    height: 100%;
+    padding: 10px;
+    background-color: gray;
+    text-align: center;
+}
+#board{
+    min-height: 578px;
+    min-width: 578px;
+    display: inline-block;
+    border-radius: 5px;
+    background-color: black;
+}
+tr{
+    padding: 0;
+    margin: 0;
+}
+td{
+    border-radius: 5px;
+    padding: 0;
+    margin: 0;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+}
+td img{
+    object-fit: contain;
+    padding-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+td img:hover{
+    cursor: grab;
+}
+td img:drop{
+    cursor: move;
+}
+.boardBlackSquare{
+    background-color: black;
+}
+.boardWhiteSquare{
+    background-color: lightgray;
+}
+.possibleMoveSquare{
+    background-color: lightgreen;
+}
+.possibleKillSquare{
+    background-color: red;
+}
+.promotionSquare{
+    background-color: yellow;
+}
+.castlingMoveSquare{
+    background-color: lightblue;
+}
