@@ -1,0 +1,31 @@
+CHESS by ParadoX
+
+Bring a friend to the board.
+
+Chess is a small online chess prototype built with HTML, CSS, JavaScript, and Firebase. Create a table, share its ID with a friend, and play directly in your desktop browser.
+
+Features
+- Online matches for two players through shared table IDs.
+- Play as a guest or sign up for an account.
+- Choose white, black, or a random starting color when creating a table.
+- Optional table passwords, spectators, and spectator chat.
+- In-table chat and drag-and-drop piece movement with highlighted moves.
+- Account profiles with match statistics.
+
+How to play
+1. Log in, sign up, or choose Play as guest and enter a name.
+2. Select Make New Table, choose your settings, and select Start Table.
+3. Share the Current Table ID with your friend.
+4. Your friend enters that ID and selects Join Existing Table.
+5. Once both players have joined, the host selects Start Game.
+6. On your turn, drag a piece onto a highlighted square.
+
+Requirements
+Use a desktop browser with a mouse and an active internet connection. Both players need their own browser session. This game depends on its Firebase online service.
+
+Prototype notes
+This is an early chess implementation. Castling is not implemented, and checkmate handling is still experimental. It is intended for casual play. There is no computer opponent, automatic matchmaking, offline mode, or local hot-seat mode. Touch controls are not supported.
+
+Credits
+Game by ParadoX.
+Cover and icon artwork generated with OpenAI image generation tools.

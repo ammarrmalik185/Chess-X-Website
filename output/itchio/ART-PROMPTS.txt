@@ -1,0 +1,11 @@
+﻿Generated using the built-in image_gen tool (not the API/CLI fallback).
+Final outputs are saved in output/itchio/artwork.
+The master images are AI-generated marketing artwork, not gameplay screenshots.
+Upload exports were resized without cropping. Icon sizes were also exported as ICO.
+
+COVER PROMPT
+Use case: ads-marketing. Create a polished itch.io cover image for an existing browser game named Chess by ParadoX. Landscape 1260x1000 (ratio 1.26:1). A bold editorial chess poster: large ivory knight facing a dark graphite king on a simple chessboard, dramatic soft studio light, charcoal background, restrained fresh green accents inspired by the game's green interface, clean tactile pieces. Clear large elegant typography reading exactly 'CHESS', smaller text exactly 'by ParadoX'. Keep all text and subjects well inside a 12 percent safe margin so it downscales to 630x500 and 315x250. Premium minimalist graphic composition, excellent thumbnail readability, no UI mockup, no screenshots, no extra text, no watermarks. Marketing artwork for a basic online chess prototype, avoid implying fantasy battles or advanced game modes.
+
+ICON PROMPT
+Use case: logo-brand. Asset type: game icon for Chess by ParadoX, square 1024x1024 PNG. One bold ivory chess knight silhouette in profile centered on a charcoal square with a restrained fresh green circular backing accent. Flat clean geometric graphic, generous 15 percent safe padding, crisp edges, high contrast, readable at 32x32, no letters, no words, no watermark, no board, no decorative small details. Opaque background.
+

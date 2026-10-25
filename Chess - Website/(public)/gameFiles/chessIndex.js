@@ -63,7 +63,8 @@ function addDatabaseActionListeners(){
                 setupPlayerData();
                 setTurnValues();
                 renderMessages();
-                if(detectCheckMate(currentGameData[currentUserData.currentPlayerNumber].color))
+                if(currentGameData.running && currentUserData.currentPlayerNumber !== "spectator" &&
+                    detectCheckMate(currentGameData[currentUserData.currentPlayerNumber].color))
                     forfeitMatch();
             }else{
                 showSnackbarAlert("Kicked by Host");

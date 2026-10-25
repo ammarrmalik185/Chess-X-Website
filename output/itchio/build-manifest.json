@@ -1,0 +1,13 @@
+{
+  "archive": "chess-paradox-html5.zip",
+  "sha256": "9877d9caeb57ab95ea1876e338f292ff606abb9caa08b25733fe5d6233d4d2b9",
+  "files": 28,
+  "compressed_bytes": 409350,
+  "uncompressed_bytes": 511461,
+  "entry_point": "index.html",
+  "external_dependencies": [
+    "Firebase JavaScript SDK (gstatic.com)",
+    "Firebase Authentication, Realtime Database and Storage for chess-x"
+  ],
+  "local_asset_references": "passed; exact case verified"
+}

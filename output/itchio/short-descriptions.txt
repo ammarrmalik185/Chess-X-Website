@@ -1,0 +1,5 @@
+1. (103 characters) A browser chess prototype for two online players, with shared tables, guest play, chat, and spectators.
+
+2. (72 characters) Bring a friend, share a table ID, and play chess online in your browser.
+
+3. (91 characters) Online chess by ParadoX: create a table, invite a friend, and play. Desktop mouse controls.

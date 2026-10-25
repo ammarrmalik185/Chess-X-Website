@@ -1,0 +1,38 @@
+{
+  "title": "Chess by ParadoX",
+  "suggested_slug": "chess-by-paradox",
+  "short_description": "A browser chess prototype for two online players, with shared tables, guest play, chat, and spectators.",
+  "classification": "Game",
+  "kind": "HTML",
+  "release_status": "Prototype",
+  "genre": "Strategy",
+  "suggested_tags": [
+    "chess",
+    "board-game",
+    "multiplayer",
+    "turn-based",
+    "2d"
+  ],
+  "pricing_recommendation": "Free",
+  "input": "Mouse",
+  "players": "2 online players, optional spectators",
+  "mobile_friendly": false,
+  "embed": {
+    "mode": "Embed in page",
+    "width": 1280,
+    "height": 1050,
+    "fullscreen_button": true,
+    "scrollbars": true,
+    "click_to_play": true
+  },
+  "theme": {
+    "background": "#191c1c",
+    "content_background": "#252a28",
+    "text": "#f3efe4",
+    "links_and_buttons": "#4caf50"
+  },
+  "upload": "chess-paradox-html5.zip",
+  "cover": "artwork/cover-630x500.png",
+  "description": "description.txt",
+  "publication_status": "Not uploaded or published"
+}

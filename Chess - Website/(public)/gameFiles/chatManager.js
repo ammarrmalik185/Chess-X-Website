@@ -51,7 +51,10 @@ function renderSingleMessage(messageValue) {
     let timeContainer = document.createElement("p");
 
     if(messageValue["userType"] === "spectator"){
-        playerNameContainer.innerHTML = "<span>spectator</span>" + messageValue["senderName"];
+        let spectatorLabel = document.createElement("span");
+        spectatorLabel.innerText = "spectator";
+        playerNameContainer.appendChild(spectatorLabel);
+        playerNameContainer.appendChild(document.createTextNode(messageValue["senderName"]));
     }else{
         playerNameContainer.innerText = messageValue["senderName"];
     }

@@ -40,7 +40,7 @@ function setup(){
                             "\nWin rate : " + Math.round((userSnapData["gamesWon"]/userSnapData["gamesPlayed"]*100)*10)/10 + "%";
                     }else {
                         statsContainer.innerText = "No games played";
-                    }w
+                    }
 
                 }else{
                     if (currentUserData.user.isAnonymous){
@@ -57,7 +57,7 @@ function setup(){
                             currentUserData.authType = "guest";
                         }
                     }else{
-                        let nameField = document.getElementById("nameField");
+                        let nameField = document.getElementById("nameFieldNewUser");
                         firebase.database().ref().child("userData").child(currentUserData.user.uid).child("name").set(nameField.value);
                         currentUserData.authType = "verified";
                         currentUserData.name = nameField.value;
@@ -126,7 +126,7 @@ function signUp() {
     let emailField = document.getElementById("emailFieldNewUser");
     let passWordField1 = document.getElementById("passwordField1NewUser");
     let passWordField2 = document.getElementById("passwordField2NewUser");
-    let nameField = document.getElementById("nameField");
+    let nameField = document.getElementById("nameFieldNewUser");
     if (nameField.value.trim() !== "") {
         if (passWordField1.value === passWordField2.value) {
             firebase.auth().createUserWithEmailAndPassword(emailField.value, passWordField1.value).catch(function (error) {

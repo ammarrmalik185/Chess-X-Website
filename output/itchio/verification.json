@@ -1,0 +1,19 @@
+{
+  "liveStartup": {
+    "errors": [],
+    "failed": [],
+    "boardCells": 64,
+    "loginVisible": true
+  },
+  "isolatedRegressionChecks": {
+    "signup": true,
+    "registeredProfile": true,
+    "spectatorGuard": true,
+    "spectatorNameEscaped": true,
+    "pageErrors": []
+  },
+  "screenshots": {
+    "screenshot-login.png": "Actual local build startup using live Firebase SDK.",
+    "screenshot-board-preview.png": "Actual local build board initialized for visual preview; not a live multiplayer session."
+  }
+}

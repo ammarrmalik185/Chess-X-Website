@@ -1,0 +1,70 @@
+ITCH.IO RELEASE KIT ? Chess by ParadoX
+
+STATUS
+Prepared locally. This kit has not been uploaded or published to itch.io.
+The game ZIP is validated, and startup and isolated regression checks pass.
+A real two-player Firebase session and the itch.io iframe still need testing.
+
+FILES
+chess-paradox-html5.zip ? upload THIS archive as the browser game.
+chess-paradox-release-kit.zip ? handoff bundle; do not upload it as the HTML game.
+artwork/cover-630x500.png ? recommended cover artwork export.
+artwork/cover-315x250.png ? smaller cover export.
+artwork/icon-512.png ? primary square icon; more sizes and ICO are included.
+artwork/cover-master.png, icon-master.png ? original AI artwork.
+screenshot-login.png ? actual game startup screenshot.
+screenshot-board-preview.png ? actual board initialized locally for visual preview,
+  not a live match; caption it as a board preview if used on the listing.
+description.txt ? copy into the itch.io description editor.
+description.html ? equivalent HTML for the editor's HTML mode.
+short-descriptions.txt ? three short description options and character counts.
+listing-metadata.json ? suggested form fields and page theme.
+build-manifest.json, verification.json ? packaging and browser check results.
+ART-PROMPTS.txt ? prompts and generation provenance.
+
+UPLOAD
+1. Sign in at https://itch.io/game/new and create a new project.
+2. Title: Chess by ParadoX. Suggested URL slug: chess-by-paradox (availability unverified).
+3. Classification: Game. Kind of project: HTML. Release status: Prototype.
+4. Suggested pricing: free. Genre: Strategy.
+5. Paste the first short description and description.txt. Upload cover-630x500.png.
+6. Upload chess-paradox-html5.zip. Mark it as the file to play in the browser.
+   It contains index.html at its root. Keep the archive intact.
+7. Embed in page: 1280 x 1050. Enable fullscreen, click to play, and scrollbars.
+   The current board has a fixed minimum size; fullscreen or scrolling may be
+   needed on smaller screens. Leave Mobile Friendly disabled.
+8. Suggested tags: chess, board-game, multiplayer, turn-based, 2d. Use available
+   matching tags in the editor. Controls: Mouse.
+9. Optional theme: BG #191c1c, content #252a28, text #f3efe4, links #4caf50.
+10. Save as a draft and preview. Complete the live check below before publishing.
+
+LIVE CHECK BEFORE PUBLISHING
+- Confirm the chess-x Firebase project, Authentication providers (anonymous and
+  email/password), Realtime Database, and Storage remain enabled and configured.
+- This archive preserves the existing Firebase configuration and loads Firebase
+  SDKs over HTTPS. Uploading to itch.io does not provision or migrate the backend.
+- Test guest login and signup in the actual itch.io preview. Check Firebase
+  authorized domains only if Authentication reports an unauthorized-domain error.
+- Use two separate browser profiles: create a table, join by ID, start the match,
+  move a piece on each side, and confirm board synchronization and chat.
+- Test a spectator session and a password-protected table.
+- Check the game in fullscreen and verify all images load.
+- Retain the prototype limitation notes: castling is missing, checkmate handling
+  is experimental, and desktop mouse controls are required.
+
+LOCAL CHANGES INCLUDED
+Fixed signup name field selection, a stray reference that broke registered
+profile loading, a spectator-only checkmate crash, and HTML interpretation of
+spectator display names. Added language/description metadata and generated icon.
+These are targeted release fixes; the chess rules engine is otherwise unchanged.
+
+REBUILD AND VERIFY
+From the repository root: python scripts/build_itchio.py
+Optional browser checks: npm.cmd install --prefix tmp/itchio-test playwright
+Then: node scripts/verify_itchio.cjs (uses the installed Microsoft Edge browser).
+The game archive contains runtime files only: no .git, editor metadata, tooling,
+Firebase deployment config, test dependencies, or marketing artwork masters.
+
+OFFICIAL REFERENCES (checked 2026-10-26)
+https://itch.io/docs/creators/html5
+https://itch.io/docs/creators/design
