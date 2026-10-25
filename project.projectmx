@@ -8,6 +8,12 @@
       "name": "Chess",
       "url": "https://paradoxsoft185.itch.io/chess",
       "type": "Itch.io"
+    },
+    {
+      "id": "c880e959315d44fa8a17c63bfc27a2ad",
+      "name": "Chess X",
+      "url": "https://chess-x.web.app/",
+      "type": "Web"
     }
   ]
 }
